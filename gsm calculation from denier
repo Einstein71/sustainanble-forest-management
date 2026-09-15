@@ -1,0 +1,487 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN3FJsEnkWTodBXyl96m98A",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Einstein71/sustainanble-forest-management/blob/main/gsm%20calculation%20from%20denier\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 84,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lPP1M_lFEWF-",
+        "outputId": "d9601ef0-4573-43b3-e1b1-76a993b79ed7"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'erica': 40, 'Daniel': 28, 'Yvonne': 29}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 84
+        }
+      ],
+      "source": [
+        "my_list_range = [i for i in [0, 1, 2, 3, 4]]\n",
+        "my_list_range\n",
+        "birds=list((\"parrot\", \"piccock\"))\n",
+        "birds\n",
+        "our_dict= dict(erica=40, Daniel=28, Yvonne=29)\n",
+        "our_dict"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age=87\n",
+        "if age==17:\n",
+        "  print(\"mid\")\n",
+        "elif age<=17:\n",
+        "  print(\"young\")\n",
+        "else:\n",
+        "  print(\"adult\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x-9OfZs5L5ys",
+        "outputId": "57e8180d-82a0-48cb-e23e-6b3bbcf121ee"
+      },
+      "execution_count": 85,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "adult\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "production_numbers=[23,45,76,44,45,78]\n",
+        "index=1\n",
+        "while index<len(production_numbers):\n",
+        "  current_number=production_numbers[index]\n",
+        "  if current_number>30:\n",
+        "    print(current_number)\n",
+        "  index +=1"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zCoG0RBmVjw0",
+        "outputId": "eb619079-baea-4021-9b15-5123709d5362"
+      },
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "45\n",
+            "76\n",
+            "44\n",
+            "45\n",
+            "78\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_of_numbers=[0,1,2,3,4,5,6,6,7,8]\n",
+        "for i in list_of_numbers:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6OUU7izQddGF",
+        "outputId": "7ec42840-72dd-4537-b467-fa6add1e1b24"
+      },
+      "execution_count": 87,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "6\n",
+            "7\n",
+            "8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "production=0\n",
+        "while production <=700:\n",
+        "  print(production)\n",
+        "  production+=50"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nAff_KIrlbI3",
+        "outputId": "8c21a765-afe5-4974-8c0e-3241538718cb"
+      },
+      "execution_count": 88,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "50\n",
+            "100\n",
+            "150\n",
+            "200\n",
+            "250\n",
+            "300\n",
+            "350\n",
+            "400\n",
+            "450\n",
+            "500\n",
+            "550\n",
+            "600\n",
+            "650\n",
+            "700\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "deforestation_data={\"Amazon\":120, \"Congo basin\": 80, \"Southern Asia\":140, \"East Austrilia\":40}\n",
+        "critical_threshold=90\n",
+        "\n",
+        "for continent, ground_cover in deforestation_data.items():\n",
+        "  if ground_cover > critical_threshold:\n",
+        "    print(f\"Critical deforestation in {continent} by {ground_cover} sq km \\n\")\n",
+        "  else:\n",
+        "    print(f\"Deforestation well controlled in {continent}, only {ground_cover} sq km \\n\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Uw17AORp1X8Z",
+        "outputId": "86f72e14-de58-4888-f1be-97b7c883e8de"
+      },
+      "execution_count": 89,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Critical deforestation in Amazon by 120 sq km \n",
+            "\n",
+            "Deforestation well controlled in Congo basin, only 80 sq km \n",
+            "\n",
+            "Critical deforestation in Southern Asia by 140 sq km \n",
+            "\n",
+            "Deforestation well controlled in East Austrilia, only 40 sq km \n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ocean_temp={\"Pacific\":[25,25.3,25.6],\n",
+        "            \"Atlantic\":[23.4,23.8,23.7],\n",
+        "            \"Indian\":[26.5,-29, 77]}\n",
+        "\n",
+        "for ocean, temp in ocean_temp.items():\n",
+        "  sum_temp=0\n",
+        "  for temp_val in temp:\n",
+        "   sum_temp +=temp_val\n",
+        "  print(f\" Total Ocean temperatures for {ocean}:{sum_temp}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1IMTwcaI52vW",
+        "outputId": "e54e1d82-1059-46c7-982c-f154b49ff620"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Total Ocean temperatures for Pacific:75.9\n",
+            " Total Ocean temperatures for Atlantic:70.9\n",
+            " Total Ocean temperatures for Indian:74.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a59488fe",
+        "outputId": "fe3c8ff4-305a-4213-e50d-238d341fcec8"
+      },
+      "source": [
+        "for ocean, temperatures in ocean_temp.items():\n",
+        "  sum_temp = 0\n",
+        "  for temp_val in temperatures:\n",
+        "    sum_temp += temp_val\n",
+        "  # Calculate the average by dividing the sum by the number of temperatures\n",
+        "   # Avoid division by zero if the list is empty\n",
+        "  if temperatures:\n",
+        "    average_temp = sum_temp / len(temperatures)\n",
+        "    print(f\"Average temperature for {ocean}: {average_temp:.2f}\")\n",
+        ""
+      ],
+      "execution_count": 91,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Average temperature for Pacific: 25.30\n",
+            "Average temperature for Atlantic: 23.63\n",
+            "Average temperature for Indian: 24.83\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0595082f",
+        "outputId": "996c0bdb-86b8-460c-e878-1c538d1bed72"
+      },
+      "source": [
+        "import math\n",
+        "\n",
+        "for ocean, temperatures in ocean_temp.items():\n",
+        "  if not temperatures:\n",
+        "    print(f\"No temperatures found for {ocean}\")\n",
+        "    continue\n",
+        "\n",
+        "  # Sort the temperatures to find the median\n",
+        "  sorted_temps = sorted(temperatures)\n",
+        "  n = len(sorted_temps)\n",
+        "\n",
+        "  if n % 2 == 1: # Odd number of elements\n",
+        "    median_temp = sorted_temps[n // 2]\n",
+        "  else: # Even number of elements\n",
+        "    mid1 = sorted_temps[n // 2 - 1]\n",
+        "    mid2 = sorted_temps[n // 2]\n",
+        "    median_temp = (mid1 + mid2) / 2\n",
+        "\n",
+        "  print(f\"Median temperature for {ocean}: {median_temp:.2f}\")"
+      ],
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Median temperature for Pacific: 25.30\n",
+            "Median temperature for Atlantic: 23.70\n",
+            "Median temperature for Indian: 26.50\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "10bfa7f0",
+        "outputId": "f23f0763-582e-4f35-ea83-1930ef296381"
+      },
+      "source": [
+        "for ocean, temperatures in ocean_temp.items():\n",
+        "  if not temperatures:\n",
+        "    print(f\"No temperatures found for {ocean}\")\n",
+        "    continue\n",
+        "\n",
+        "  sorted_temps = sorted(temperatures)\n",
+        "  n = len(sorted_temps)\n",
+        "\n",
+        "  # Calculate Q3 (Upper Quartile)\n",
+        "  # Find the median of the upper half of the data.\n",
+        "\n",
+        "  if n == 1:\n",
+        "      upper_quartile = sorted_temps[0]\n",
+        "  else:\n",
+        "      # Determine the upper half of the data\n",
+        "      if n % 2 == 1: # Odd number of elements, exclude the actual median from upper half\n",
+        "          upper_half_start_index = n // 2 + 1\n",
+        "      else: # Even number of elements, split into two equal halves\n",
+        "          upper_half_start_index = n // 2\n",
+        "\n",
+        "      upper_half = sorted_temps[upper_half_start_index:]\n",
+        "      n_upper = len(upper_half)\n",
+        "\n",
+        "      if n_upper == 0:\n",
+        "          upper_quartile = None # Should not happen if original list is not empty and n > 1\n",
+        "      elif n_upper % 2 == 1:\n",
+        "          upper_quartile = upper_half[n_upper // 2]\n",
+        "      else:\n",
+        "          mid1_upper = upper_half[n_upper // 2 - 1]\n",
+        "          mid2_upper = upper_half[n_upper // 2]\n",
+        "          upper_quartile = (mid1_upper + mid2_upper) / 2\n",
+        "\n",
+        "  if upper_quartile is not None:\n",
+        "      print(f\"Upper quartile for {ocean}: {upper_quartile:.2f}\")"
+      ],
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Upper quartile for Pacific: 25.60\n",
+            "Upper quartile for Atlantic: 23.80\n",
+            "Upper quartile for Indian: 77.00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers=range(1,11)\n",
+        "numbers_and_squares={x:x**4 for x in numbers}\n",
+        "print(numbers_and_squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-OLW6v1OD0PM",
+        "outputId": "ba9afd4f-3fa0-4abf-8ff9-4777b45ed69d"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1: 1, 2: 16, 3: 81, 4: 256, 5: 625, 6: 1296, 7: 2401, 8: 4096, 9: 6561, 10: 10000}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def multiplication(i,x):\n",
+        "  number=i*i-x\n",
+        "  return number\n",
+        "\n",
+        "multiplication(3,4)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Znj-qwA8woM_",
+        "outputId": "d1c341af-b6da-4a8f-f6c2-2f2566853931"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def gsm_denier_convert(d,t):\n",
+        "  # 'g' is calculated inside and returned, so it's not needed as a parameter\n",
+        "  g_calculated=d/t/4.5\n",
+        "  return g_calculated\n",
+        "\n",
+        "# Call the function with only 'd' and 't', then store and print the result\n",
+        "result_g = gsm_denier_convert(1140, 2.35)\n",
+        "print(result_g)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qBzwcFfwy_7i",
+        "outputId": "8560b92f-9ea6-4f2e-ea94-327266710f3b"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "107.80141843971631\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
